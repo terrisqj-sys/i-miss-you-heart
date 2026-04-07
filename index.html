@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Nairobi</title>
+
+<style>
+body {
+  margin: 0;
+  background: #020202;
+  color: #00ff9d;
+  font-family: "Courier New", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+.terminal {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.heart {
+  position: relative;
+  width: 120px;
+  height: 110px;
+  margin: 0 auto 30px;
+  animation: beat 1s infinite;
+  filter: drop-shadow(0 0 10px #00ff9d);
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 95px;
+  background: #00ff9d;
+  border-radius: 60px 60px 0 0;
+  top: 0;
+}
+
+.heart:before {
+  left: 60px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.title {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.sub {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+@keyframes beat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="terminal">> connecting to Nairobi...</div>
+
+  <div class="heart"></div>
+
+  <div class="title">I'M SORRY NAIROBI ❤️</div>
+  <div class="sub">you mean more to me than I showed</div>
+
+  <div class="terminal">> restoring_connection...</div>
+</div>
+
+</body>
+</html>
