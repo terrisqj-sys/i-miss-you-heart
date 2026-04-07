@@ -1,90 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Good Morning Nairobi</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Nairobi</title>
 
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(to top, #fff1f5, #ffe4ec, #fff9fb);
-      font-family: "Segoe UI", sans-serif;
-      overflow: hidden;
-    }
+<style>
+body {
+  margin: 0;
+  background: #020202;
+  color: #00ff9d;
+  font-family: "Courier New", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    .container {
-      text-align: center;
-      padding: 30px;
-      max-width: 500px;
-    }
+.container {
+  text-align: center;
+}
 
-    .sun {
-      width: 90px;
-      height: 90px;
-      margin: 0 auto 25px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #ffd166, #ff9f1c);
-      box-shadow: 0 0 40px rgba(255, 200, 100, 0.6);
-      animation: rise 3s ease-in-out infinite alternate;
-    }
+.terminal {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #ff4d6d;
-    }
+.heart {
+  position: relative;
+  width: 120px;
+  height: 110px;
+  margin: 0 auto 30px;
+  animation: beat 1s infinite;
+  filter: drop-shadow(0 0 10px #00ff9d);
+}
 
-    .text {
-      margin-top: 15px;
-      font-size: 1.1rem;
-      color: #444;
-      line-height: 1.6;
-      opacity: 0;
-      animation: fadeIn 2s ease forwards;
-      animation-delay: 1s;
-    }
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 95px;
+  background: #00ff9d;
+  border-radius: 60px 60px 0 0;
+  top: 0;
+}
 
-    .heart {
-      font-size: 28px;
-      margin-top: 20px;
-      animation: beat 1.2s infinite;
-    }
+.heart:before {
+  left: 60px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
 
-    @keyframes rise {
-      from { transform: translateY(10px); }
-      to { transform: translateY(-10px); }
-    }
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
+.title {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
 
-    @keyframes beat {
-      0%,100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-    }
-  </style>
+.sub {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+@keyframes beat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="sun"></div>
 
-    <h1>Good morning, Nairobi ☀️</h1>
+<div class="container">
+  <div class="terminal">> connecting to Nairobi...</div>
 
-    <div class="text">
-      I hope today is gentle with you…<br><br>
-      May everything go your way,<br>
-      and even the small moments make you smile.<br><br>
-      Just know… you were on my mind this morning.
-    </div>
+  <div class="heart"></div>
 
-    <div class="heart">❤️</div>
-  </div>
+  <div class="title">I'M SORRY NAIROBI ❤️</div>
+  <div class="sub">you mean more to me than I showed</div>
+
+  <div class="terminal">> restoring_connection...</div>
+</div>
+
 </body>
 </html>
